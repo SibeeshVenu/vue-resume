@@ -22,7 +22,7 @@ import { Options, Vue } from "vue-class-component";
     PrismEditor,
   },
   data: () => ({
-    code: JSON.stringify(sampleData),
+    code: JSON.stringify(sampleData, null, "\t"),
   }),
   methods: {
     submit() {
