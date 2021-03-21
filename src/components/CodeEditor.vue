@@ -1,36 +1,39 @@
 <template>
   <prism-editor
-    v-on:blur="submit"
+    @blur="submit()"
     class="my-editor"
     v-model="code"
     :highlight="highlighter"
-    line-numbers
   ></prism-editor>
 </template>
-<script>
+
+<script lang="ts">
 import { PrismEditor } from "vue-prism-editor";
 import { highlight, languages } from "prismjs/components/prism-core";
 import "vue-prism-editor/dist/prismeditor.min.css";
 import "prismjs/components/prism-clike";
-import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-json";
 import "prismjs/themes/prism-tomorrow.css";
-export default {
+import sampleData from "../assets/resume-template.json";
+import { Options, Vue } from "vue-class-component";
+
+@Options({
   components: {
     PrismEditor,
   },
   data: () => ({
-    code:
-      "Start editing your resume in JSON format here, rest we will take care!",
+    code: JSON.stringify(sampleData),
   }),
   methods: {
     submit() {
       console.log(this.code);
     },
-    highlighter(code) {
-      return highlight(code, languages.js);
+    highlighter(code: string) {
+      return highlight(code, languages.json);
     },
   },
-};
+})
+export default class CodeEditor extends Vue {}
 </script>
 
 <style>
