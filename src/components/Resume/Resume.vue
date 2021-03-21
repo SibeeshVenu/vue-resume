@@ -1,6 +1,5 @@
 <template>
   <div class="resume">
-    <div>{{ title }}</div>
     <PersonalDetails />
     <SocialLinks />
     <WorkExperience />
@@ -13,28 +12,25 @@ import PersonalDetails from "./PersonalDetails.vue";
 import SocialLinks from "./SocialLinks.vue";
 import WorkExperience from "./WorkExperience.vue";
 import { useStore } from "../../store";
-
+import { ResumeContent } from "../../models/resume-content";
 @Options({
   components: {
     PersonalDetails,
     SocialLinks,
     WorkExperience,
   },
-  data: () => ({
-    title: "Resume",
-  }),
 })
 export default class Resume extends Vue {
   mounted() {
     const store = useStore();
-    console.log(JSON.stringify(store.state.resumeContent));
+    const resumeContent: ResumeContent = JSON.parse(store.state.resumeContent);
+    console.log(resumeContent);
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .resume {
-  border: 1px solid;
   padding-left: 50px;
   padding-right: 50px;
   text-align: left;
