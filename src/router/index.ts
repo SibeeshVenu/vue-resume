@@ -21,6 +21,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "View",
     component: () => import("../views/View.vue"),
   },
+  {
+    path: "/download",
+    name: "Download",
+    component: () => import("../views/Download.vue"),
+  },
 ];
 
 const router = createRouter({

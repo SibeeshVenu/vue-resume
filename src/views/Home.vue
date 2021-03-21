@@ -15,3 +15,9 @@ import CodeEditor from "@/components/CodeEditor.vue"; // @ is an alias to /src
 })
 export default class Home extends Vue {}
 </script>
+<style lang="scss" scoped>
+.home {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+</style>
