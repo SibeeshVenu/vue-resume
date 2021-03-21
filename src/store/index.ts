@@ -1,12 +1,12 @@
-import { InjectionKey } from 'vue'
-import { createStore, useStore as baseUseStore, Store } from 'vuex'
+import { InjectionKey } from "vue";
+import { createStore, useStore as baseUseStore, Store } from "vuex";
 
 import sampleData from "../assets/resume-template.json";
 export interface State {
   resumeContent: string
 }
 
-export const key: InjectionKey<Store<State>> = Symbol()
+export const key: InjectionKey<Store<State>> = Symbol();
 
 export const store = createStore<State>({
   state: {
@@ -16,5 +16,5 @@ export const store = createStore<State>({
 
 // define your own `useStore` composition function
 export function useStore() {
-  return baseUseStore(key)
+  return baseUseStore(key);
 }

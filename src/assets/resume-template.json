@@ -1,6 +1,9 @@
 {
   "personalDetails": {
     "name": "Sibeesh Venu",
+    "mobileNumber": "1234567890",
+    "email": "test@test.com",
+    "currentLocation": "Sligo, Ireland",
     "jobTitle": "Full Stack Developer",
     "professionalSummary": "More than 8 years of experience in Software Development, hands-on with a wide variety of technologies such as Azure Services, Azure DevOps, Azure IoT, Azure Functions, Asp.Net Core, Angular, and other Front-End technologies, SharePoint, Microsoft Flow, Docker, etc. I have experience in working with Monolithic, Microservices, and Cloud-Native Applications. Love to learn new technologies, implement them in projects, and write about them. Believer of “One who stops learning is old”. An engineer by profession and a writer by passion. Author of the book 'Asp Net Core and Azure with Raspberry Pi 4' (https://www.amazon.in/Asp-Net-Core-Azure-Raspberry-Applications/dp/1484264428). Microsoft MVP since 2016 and have written more than 500 blogs."
   },
@@ -18,9 +21,40 @@
       "jobLocation": "Sligo, Ireland"
     }
   ],
-  "education": {},
-  "socialLinks": {},
-  "skills": {},
-  "languages": {},
-  "interests": {}
+  "education": [
+    {
+      "collegeName": "Engineering",
+      "universityName": "Anna University",
+      "courseDuration": "21/03/2020 - Present",
+      "location": "Chennai, India"
+    },
+    {
+      "collegeName": "Engineering",
+      "universityName": "Anna University",
+      "courseDuration": "21/03/2020 - Present",
+      "location": "Chennai, India"
+    }
+  ],
+  "socialLinks": [
+    {
+      "name": "twitter",
+      "link": "twitter.com/sibeeshvenu"
+    },
+    {
+      "name": "twitter",
+      "link": "twitter.com/sibeeshvenu"
+    }
+  ],
+  "skills": [
+    "Azure",
+    "Writing"
+  ],
+  "languages": [
+    "English",
+    "Malayalam"
+  ],
+  "interests": [
+    "Blogging",
+    "Writing"
+  ]
 }

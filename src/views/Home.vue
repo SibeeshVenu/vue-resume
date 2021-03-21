@@ -8,7 +8,7 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import CodeEditor from "@/components/CodeEditor.vue"; // @ is an alias to /src
-import Resume from "@/components/Resume/Resume.vue";
+import Resume from "@/components/resume/Resume.vue";
 
 @Options({
   components: {

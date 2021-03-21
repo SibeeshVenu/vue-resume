@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import Item from "../Shared/Item.vue";
+import Item from "../shared/Item.vue";
 @Options({
   components: {
     Item,
