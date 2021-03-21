@@ -14,26 +14,27 @@ import "vue-prism-editor/dist/prismeditor.min.css";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-json";
 import "prismjs/themes/prism-tomorrow.css";
-import sampleData from "../assets/resume-template.json";
 import { Options, Vue } from "vue-class-component";
+import { useStore } from "../store";
 
 @Options({
   components: {
     PrismEditor,
   },
   data: () => ({
-    code: JSON.stringify(sampleData, null, "\t"),
+    code: useStore().state.resumeContent,
   }),
   methods: {
     submit() {
-      console.log(this.code);
+      this.$store.state.resumeContent = this.code;
     },
     highlighter(code: string) {
       return highlight(code, languages.json);
     },
   },
 })
-export default class CodeEditor extends Vue {}
+export default class CodeEditor extends Vue {
+}
 </script>
 
 <style>
